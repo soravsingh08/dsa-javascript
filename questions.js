@@ -67,23 +67,96 @@
 
 
 
-let largestNum = -Infinity;
-let secondLrgst = -Infinity;
-let arr = [100,90,80];
+// let largestNum = -Infinity;
+// let secondLrgst = -Infinity;
+// let arr = [100,90,80];
 
-function secondLargestNum(){
-    for(let i = 0; i<arr.length; i++){
-       if(arr[i]>largestNum){
-        secondLrgst = largestNum;
-        largestNum = arr[i]
-       }
+// function secondLargestNum(){
+//     for(let i = 0; i<arr.length; i++){
+//        if(arr[i]>largestNum){
+//         secondLrgst = largestNum;
+//         largestNum = arr[i]
+//        }
 
-       else if(arr[i] > secondLrgst){
-        secondLrgst = arr[i];
-       }
+//        else if(arr[i] > secondLrgst){
+//         secondLrgst = arr[i];
+//        }
+//     }
+//     return secondLrgst
+// }
+
+// let sln = secondLargestNum()
+// console.log(sln)
+
+
+// P A T T E R N S
+
+// STAR PATTERN
+// let n =4;
+// for(let i=0; i<n; i++){
+//     let row = ""
+//     for(let j=0; j<n; j++){
+//            row = row + "*"
+//     }
+//        console.log(row)
+   
+// }
+
+//TRIANGLE PATTERN
+
+// let n = 4;
+// for(let i=0; i<n; i++){
+//     let row = ""
+//     for(let j=0; j<i+1; j++){
+//            row = row + (i + 1)
+//     }
+//        console.log(row)
+   
+// }
+
+//Reverse Countign
+
+// let n = 5;
+// for(let i=5; i>0; i--){
+//     let row = ""
+//     for(let j=0; j<i; j++){
+//            row = row + (j + 1)
+//     }
+//        console.log(row)
+   
+// }
+
+//reverse triangle
+
+// let n = 4;
+// for(let i=0; i<n; i++){
+//     let row = ""
+//     for(let j=0; j<n-(i+1); j++){
+//            row = row + "  "
+//     }
+//     for(let k =0; k<i+1; k++){
+//         row = row + "*"
+//     }
+//        console.log(row)
+   
+// }
+
+
+
+//1010 pattern
+
+let n=5;
+for (let i = 0; i<n; i++){
+    let row = ""
+    let toggle =1;
+    for(let j=0; j<i+1; j++){
+        row = row +toggle;
+        if(toggle == 1){
+            toggle = 0;
+        }
+        else{
+            toggle = 1;
+        }
     }
-    return secondLrgst
+    console.log(row)
 }
-
-let sln = secondLargestNum()
-console.log(sln)
